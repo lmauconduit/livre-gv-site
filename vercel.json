@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd _export/site && npm install && npm run build",
+  "outputDirectory": "_export/site/.vitepress/dist",
+  "installCommand": "echo 'install handled in buildCommand'",
+  "framework": null
+}

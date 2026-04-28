@@ -1,0 +1,17 @@
+flowchart TD
+    A([Au relais de rappel]) --> B[Vérifier la solidité\ndes anneaux / maillon]
+    B --> C[Passer la corde\nau milieu exact]
+    C --> D[Égaliser les deux brins\nen bas]
+    D --> E{Type de nœud\nde jonction ?}
+    E -- Nœud de jonction\nasymétrique --> F[Nœud papillon\nou de jonction]
+    E -- Double pêcheur --> G[Double pêcheur\nsur chaque brin]
+    F --> H[Vérification croisée\ndes deux membres]
+    G --> H
+    H --> I[Installer l'autobloquant\nmachard ou Prusik]
+    I --> J[Premier descend\net contrôle la corde]
+    J --> K[Second descend]
+    K --> L[Récupérer la corde]
+
+    style A fill:#7d4e10,color:#fff
+    style L fill:#1a5c37,color:#fff
+    style B fill:#2c3e50,color:#fff

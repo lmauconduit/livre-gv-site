@@ -1,0 +1,17 @@
+flowchart TD
+    A([Arrivée au relais]) --> B{Spits / goujons\ndisponibles ?}
+    B -- Oui --> C{Combien de\npoints sains ?}
+    B -- Non --> D{Coinceurs ou\nancres naturelles ?}
+
+    C -- 2 points --> E[Relais sur 2 spits\ntriangle ou direct]
+    C -- 1 seul sain --> F[Renforcer avec\nun coinceur naturel]
+
+    D -- Oui --> G[Relais naturel\nrelayette ou triangulation]
+    D -- Non --> H{Arbre ou\nbecquet solide ?}
+    H -- Oui --> I[Relais sur arbre\nou becquet rocheux]
+    H -- Non --> J[⚡ Chercher\nabsolument un point\nRéchappe si impossible]
+
+    style J fill:#c0392b,color:#fff,stroke:#922b21
+    style E fill:#1a5c37,color:#fff
+    style G fill:#1a5c37,color:#fff
+    style I fill:#1a5c37,color:#fff

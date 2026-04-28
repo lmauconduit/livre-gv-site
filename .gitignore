@@ -1,0 +1,22 @@
+# Node modules
+_export/site/node_modules/
+
+# VitePress build artefacts
+_export/site/.vitepress/dist/
+_export/site/.vitepress/cache/
+
+# Dossiers système éditoriaux — pas de contenu à versionner
+_meta/
+_rapports/
+_skill/
+
+# Ancienne structure — à supprimer après migration
+livre-gv-site/
+Editorial/
+
+# Dossiers sources privés
+_Doc/
+
+# OS
+.DS_Store
+Thumbs.db

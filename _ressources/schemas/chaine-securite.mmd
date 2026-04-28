@@ -1,0 +1,21 @@
+flowchart LR
+    A[🧗 Grimpeur\nleader] -->|corde clipée| B[Point 1\nprotection]
+    B -->|corde| C[Point 2\nprotection]
+    C -->|corde| D[Point N\nprotection]
+    D -->|corde| E[Relais\nancrage]
+    E -->|corde de rappel| F[🪢 Second\nassureur]
+
+    subgraph SECURITE["Éléments de sécurité"]
+        G[Nœud d'encordement\nvérifié]
+        H[Assurage dynamique]
+        I[Protections saines]
+    end
+
+    A -.->|"nœud en 8\nvérifié"| G
+    F -.->|"assureur actif"| H
+    B -.-> I
+
+    style A fill:#c0392b,color:#fff
+    style F fill:#27ae60,color:#fff
+    style E fill:#e67e22,color:#fff
+    style SECURITE fill:#fef9ef,stroke:#e67e22

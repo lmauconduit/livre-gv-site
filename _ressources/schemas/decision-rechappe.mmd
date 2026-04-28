@@ -1,0 +1,15 @@
+flowchart TD
+    A([Situation difficile\nen voie]) --> B{Peut-on\npoursuivre\nen sécurité ?}
+    B -- Oui --> C[Continuer\nla progression]
+    B -- Non / Doute --> D{Rappel\npossible ?}
+    D -- Oui --> E[Réchappe\npar rappel]
+    D -- Non --> F{Désescalade\npossible ?}
+    F -- Oui --> G[Descendre\nen désescalade\nsécurisée]
+    F -- Non --> H{Vire ou\nhauban pour\nbivouaquer ?}
+    H -- Oui --> I[Bivouac d'urgence\n+ appel secours\n112 ou PGHM]
+    H -- Non --> J[⚡ ALERTE\nPosition statique\nSignaux de détresse\nAttendre les secours]
+
+    style J fill:#c0392b,color:#fff,stroke:#922b21
+    style I fill:#e67e22,color:#fff
+    style C fill:#1a5c37,color:#fff
+    style E fill:#1a5c37,color:#fff

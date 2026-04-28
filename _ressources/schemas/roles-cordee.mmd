@@ -1,0 +1,21 @@
+flowchart LR
+    subgraph LEADER["🧗 Leader — Premier de cordée"]
+        L1[Ouvre la voie]
+        L2[Pose les protections]
+        L3[Construit le relais]
+        L4[Assure la montée\ndu second]
+    end
+
+    subgraph SECOND["🪢 Second — Dernier de cordée"]
+        S1[Assure le leader]
+        S2[Décroche\nles protections]
+        S3[Rejoint le relais]
+        S4[Prépare la\nlongueur suivante]
+    end
+
+    L3 -->|"Signal : Paré !"| S1
+    S3 -->|"Signal : Arrivé !"| L4
+    L4 -->|Rôles échangés\nsi nécessaire| S4
+
+    style LEADER fill:#fdf0ee,stroke:#c0392b
+    style SECOND fill:#edfaf3,stroke:#27ae60

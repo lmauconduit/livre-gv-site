@@ -1,0 +1,18 @@
+flowchart TD
+    A([Second bloqué\nou à hisser]) --> B{Matériel\ndisponible ?}
+    B -- Micro Traxion\nou Tibloc --> C[Mouflage direct\nZ ou demi-Z]
+    B -- Poignée Jumar --> D[Mouflage\nJumar + Tibloc]
+    B -- Coinceurs\n+ machard --> E[Mouflage à main\ncordelette Prusik]
+    B -- Rien de spécifique --> F[Mouflage de\nfortune — Dynaloop\n+ cabestan]
+
+    C --> G{Force\nsuffisante ?}
+    D --> G
+    E --> G
+    F --> G
+
+    G -- Oui --> H([Hisser le second])
+    G -- Non --> I[Doubler :\nmouflage composé ×4\nou appel secours]
+
+    style A fill:#7d4e10,color:#fff
+    style H fill:#1a5c37,color:#fff
+    style I fill:#e67e22,color:#fff
