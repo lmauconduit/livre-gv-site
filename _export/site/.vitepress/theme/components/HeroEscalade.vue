@@ -7,12 +7,11 @@ const props = defineProps({
   title:    { type: String, default: 'L\'escalade en grandes voies' },
   subtitle: { type: String, default: 'Manips, sécurité, organisation de cordée. Pour les grimpeurs qui veulent quitter le sol pour de bon.' },
   primaryText: { type: String, default: 'Commencer la lecture' },
-  primaryLink: { type: String, default: '/parties/partie1' },
+  primaryLink: { type: String, default: '/parties/partie1/chapitre-01' },
   secondaryText: { type: String, default: 'Voir le sommaire' },
   secondaryLink: { type: String, default: '/sommaire' },
 })
 
-// Parallax léger sur l'image background
 const offset = ref(0)
 let raf = null
 
