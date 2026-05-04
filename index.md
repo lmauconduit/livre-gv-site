@@ -65,6 +65,4 @@ Le contenu est organisé selon trois logiques imbriquées :
 
 Tu peux **lire dans l'ordre** (recommandé pour la découverte), **piocher** un chapitre selon ton besoin du moment (recherche en haut à droite), ou **consulter** les annexes en sortie de paroi (glossaire, check-lists, aide-mémoire nœuds).
 
-<div class="cta-final"><a href="/parties/partie1" class="cta-final__btn">Commencer par la partie 1 →</a></div>
-
-</div>
+<div class="cta-final"><a href="/parties/partie1/chapitre-01" class="cta-final__btn">Commencer par la partie 1 →</a></d
