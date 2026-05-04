@@ -4,7 +4,7 @@ import Stat from './Stat.vue'
 
 <template>
   <div class="stat-grid">
-    <Stat num="27" label="chapitres" hint="organisés en progression pédagogique" />
+    <Stat num="29" label="chapitres" hint="organisés en progression pédagogique" />
     <Stat num="8" label="parties" hint="de la découverte à l'autonomie" />
     <Stat num="3" label="niveaux de lecture" hint="[T] tronc commun · [A] approfondissement · [R] référence" />
     <Stat num="100%" label="accès libre" hint="gratuit, sans publicité, licence Creative Commons" />

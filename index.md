@@ -59,10 +59,14 @@ Ce site est la **version web** du livre *L'escalade en grandes voies* — un pro
 
 Le contenu est organisé selon trois logiques imbriquées :
 
-- **Une progression** — de la découverte de la GV à l'autonomie complète, en 27 chapitres.
+- **Une progression** — de la découverte de la GV à l'autonomie complète, en 29 chapitres.
 - **Une grammaire pédagogique** — chaque manipulation suit toujours le même ordre : contexte → prérequis → matériel → objectif → procédure → points critiques → erreurs → variantes → limites → nota.
 - **Trois niveaux de lecture** — pour que le grimpeur en formation et le moniteur expérimenté trouvent chacun leur compte.
 
 Tu peux **lire dans l'ordre** (recommandé pour la découverte), **piocher** un chapitre selon ton besoin du moment (recherche en haut à droite), ou **consulter** les annexes en sortie de paroi (glossaire, check-lists, aide-mémoire nœuds).
 
-<div class="cta-final"><a href="/parties/partie1/chapitre-01" class="cta-final__btn">Commencer par la partie 1 →</a></d
+<div class="cta-final">
+  <a href="/parties/partie1/chapitre-01" class="cta-final__btn">Commencer par la partie 1 →</a>
+</div>
+
+</div>
