@@ -1,5 +1,5 @@
 /* ============================================================
-   Schémas Mermaid — encadrement + numéro + caption + zoom + lightbox
+   Schémas Mermaid — encadrement + numéro + caption + agrandissement
    Structure générée par schemaIncludePlugin :
    <figure class="schema-figure" data-mmd="...">
      <button class="schema-figure__expand-btn">⤢</button>
@@ -23,9 +23,9 @@
   border-radius: 14px;
   max-width: 560px;
   box-shadow: 0 4px 16px rgba(15, 25, 34, 0.04);
-  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
+  transition: max-width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+              padding 0.3s ease,
               box-shadow 0.28s ease;
-  cursor: zoom-in;
   counter-increment: schema-num;
 }
 
@@ -57,7 +57,7 @@
   background: var(--vp-c-bg-elv);
 }
 
-/* Bouton agrandir en haut à droite */
+/* Bouton agrandir/réduire en haut à droite */
 .vp-doc .schema-figure__expand-btn {
   position: absolute;
   top: 10px;
@@ -75,13 +75,14 @@
   align-items: center;
   justify-content: center;
   z-index: 3;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
   padding: 0;
 }
 
 .vp-doc .schema-figure__expand-btn:hover {
   background: var(--gv-rouge);
   color: #fff;
+  border-color: var(--gv-rouge);
   transform: scale(1.1);
 }
 
@@ -101,6 +102,7 @@
   background: transparent;
   border: none;
   overflow-x: auto;
+  transition: max-height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .vp-doc .schema-figure svg {
@@ -109,13 +111,12 @@
   height: auto !important;
   display: block;
   margin: 0 auto;
+  transition: max-height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* Hover sur la figure : zoom subtil + ombre, comme les photos manip */
-.vp-doc .schema-figure:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 32px rgba(15, 25, 34, 0.18);
-  z-index: 50;
+/* Hover sur la figure (mode normal) : ombre subtile, pas de zoom transform */
+.vp-doc .schema-figure:not(.is-fullscreen):hover {
+  box-shadow: 0 8px 24px rgba(15, 25, 34, 0.10);
 }
 
 /* Caption sous le schéma */
@@ -139,80 +140,34 @@
 }
 
 /* ============================================================
-   Mode plein écran : .is-fullscreen toggle par Layout.vue
+   Mode agrandi — la card s'étend à 100% largeur dispo,
+   le SVG grandit. Reste in-flow, fond calcaire cohérent avec le doc.
    ============================================================ */
-body.has-schema-fullscreen {
-  overflow: hidden;
-}
-
 .vp-doc .schema-figure.is-fullscreen {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  margin: 0;
-  border-radius: 0;
-  max-width: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 40px 40px;
-  background: rgba(15, 25, 34, 0.96);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  cursor: zoom-out;
-  border: none;
-  transform: none !important;
+  max-width: 100%;
+  padding: 48px 32px 28px;
+  box-shadow: 0 12px 32px rgba(15, 25, 34, 0.12);
+  background: linear-gradient(135deg, var(--vp-c-bg-soft) 0%, var(--vp-c-bg-alt) 100%);
 }
 
-.vp-doc .schema-figure.is-fullscreen::before {
-  /* le label en mode plein écran : plus visible, avec couleur */
-  background: var(--gv-rouge);
-  color: #fff;
-  border-color: transparent;
-  font-size: 0.8rem;
-  top: 24px;
-  left: 24px;
-  padding: 5px 14px;
+.dark .vp-doc .schema-figure.is-fullscreen {
+  background: linear-gradient(135deg, var(--vp-c-bg-alt) 0%, var(--vp-c-bg-soft) 100%);
 }
 
+/* En mode agrandi, le SVG peut prendre beaucoup plus de place */
+.vp-doc .schema-figure.is-fullscreen svg {
+  max-height: 720px;
+}
+
+/* Le bouton change : la croix remplace le ⤢ */
 .vp-doc .schema-figure.is-fullscreen .schema-figure__expand-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
-  color: #fff;
-  width: 44px;
-  height: 44px;
-  font-size: 1.4rem;
-  top: 20px;
-  right: 24px;
+  font-size: 0;
 }
 
 .vp-doc .schema-figure.is-fullscreen .schema-figure__expand-btn::before {
   content: '✕';
-  font-size: 1.2rem;
-}
-
-.vp-doc .schema-figure.is-fullscreen .schema-figure__expand-btn {
-  /* remplacer le ⤢ par ✕ via font-size: 0 + ::before */
-  font-size: 0;
-}
-
-.vp-doc .schema-figure.is-fullscreen svg {
-  max-width: min(95vw, 1400px);
-  max-height: 80vh;
-  filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.4));
-}
-
-.vp-doc .schema-figure.is-fullscreen .schema-figure__caption {
-  color: rgba(255, 255, 255, 0.85);
-  border-top-color: rgba(255, 255, 255, 0.2);
   font-size: 1rem;
-  max-width: 720px;
-  margin-top: 24px;
-}
-
-.vp-doc .schema-figure.is-fullscreen .schema-figure__caption::before {
-  color: #fff;
+  line-height: 1;
 }
 
 /* Mobile : padding réduit + label plus petit */
@@ -238,12 +193,15 @@ body.has-schema-fullscreen {
   .vp-doc .schema-figure svg {
     max-height: 260px;
   }
+  .vp-doc .schema-figure.is-fullscreen svg {
+    max-height: 520px;
+  }
   .vp-doc .schema-figure.is-fullscreen {
-    padding: 70px 16px 24px;
+    padding: 40px 16px 22px;
   }
 }
 
-/* Fallback ancien sélecteur générique pour les schémas non wrappés (ancien syntaxe) */
+/* Fallback : ancien sélecteur générique pour les schémas non wrappés */
 .vp-doc > .mermaid,
 .vp-doc > div[class*="mermaid"]:has(> svg) {
   margin: 2em auto;
