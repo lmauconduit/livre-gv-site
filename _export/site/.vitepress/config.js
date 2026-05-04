@@ -6,17 +6,32 @@ import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-// Markdown-it plugin : remplace <<schema:fichier.mmd>> ou <<schema:fichier.mmd|preset>> par un bloc mermaid
+// Markdown-it plugin : remplace <<schema:fichier.mmd>> ou <<schema:fichier.mmd|preset>>
+// par un <figure class="schema-figure"> contenant le bloc mermaid + caption + bouton agrandir.
+// La caption est extraite d'un commentaire `%% Caption: …` placé en début du .mmd.
 function schemaIncludePlugin(md) {
   const originalParse = md.parse.bind(md)
   md.parse = (src, env) => {
     const processed = src.replace(/<<schema:([^>|]+)(?:\|[^>]+)?>>/g, (match, filename) => {
-      const schemaPath = path.join(__dirname, '..', '..', '..', '_ressources', 'schemas', filename.trim())
+      const mmdName = filename.trim()
+      const schemaPath = path.join(__dirname, '..', '..', '..', '_ressources', 'schemas', mmdName)
       try {
         const content = fs.readFileSync(schemaPath, 'utf-8')
-        return '```mermaid\n' + content.trim() + '\n```'
+        // Extraire %% Caption: ... du contenu
+        const captionMatch = content.match(/^%%\s*Caption:\s*(.+)$/m)
+        const caption = captionMatch ? captionMatch[1].trim() : ''
+
+        // Wrapper figure avec lignes vides pour que markdown-it traite le bloc HTML correctement
+        let output = `<figure class="schema-figure" data-mmd="${mmdName}">\n`
+        output += `<button class="schema-figure__expand-btn" type="button" aria-label="Agrandir le schéma">⤢</button>\n\n`
+        output += '```mermaid\n' + content.trim() + '\n```\n\n'
+        if (caption) {
+          output += `<figcaption class="schema-figure__caption">${caption}</figcaption>\n`
+        }
+        output += `</figure>`
+        return output
       } catch (e) {
-        return `> ⚠️ Schéma introuvable : \`${filename.trim()}\``
+        return `> ⚠️ Schéma introuvable : \`${mmdName}\``
       }
     })
     return originalParse(processed, env)
@@ -28,7 +43,6 @@ export default withMermaid(defineConfig({
   title: "L'escalade en grandes voies",
   description: "Guide technique complet pour grimper en grandes voies — manips, sécurité, organisation de cordée, gestion des situations.",
 
-  // Tolérer les liens cassés (annexes, avant-propos, références internes) tant que tous les fichiers ne sont pas créés
   ignoreDeadLinks: true,
 
   srcDir: '../../',
@@ -43,7 +57,6 @@ export default withMermaid(defineConfig({
     '_export/**',
     'livre-gv-site/**',
     'node_modules/**',
-    // Anciens fichiers de partie monolithiques — découpés en parties/partieN/chapitre-NN.md
     'Partie1-Decouvrir-la-Grande-Voie.md',
     'Partie2-Se-Preparer.md',
     'Partie3-Sorganiser-en-Cordee.md',

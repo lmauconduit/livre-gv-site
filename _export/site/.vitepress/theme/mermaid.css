@@ -1,39 +1,41 @@
 /* ============================================================
-   Schémas Mermaid — encadrement visuel
-   Le diagramme est rendu dans une card calcaire avec label.
-   Sélecteurs multiples pour couvrir les variations de classe
-   selon les versions de vitepress-plugin-mermaid.
+   Schémas Mermaid — encadrement + numéro + caption + zoom + lightbox
+   Structure générée par schemaIncludePlugin :
+   <figure class="schema-figure" data-mmd="...">
+     <button class="schema-figure__expand-btn">⤢</button>
+     <div class="mermaid">...</div>
+     <figcaption class="schema-figure__caption">…</figcaption>
+   </figure>
    ============================================================ */
 
-/* Conteneur du schéma — la div générée par le plugin */
-.vp-doc .mermaid,
-.vp-doc div[class*="mermaid"]:has(> svg),
-.vp-doc div[id*="mermaid"]:has(> svg) {
+/* Counter pour numérotation automatique des schémas par page */
+.vp-doc {
+  counter-reset: schema-num;
+}
+
+/* La figure : card calcaire compacte */
+.vp-doc .schema-figure {
   position: relative;
   margin: 2.4em auto;
-  padding: 36px 28px 28px;
+  padding: 40px 24px 22px;
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
   border-radius: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 560px;
   box-shadow: 0 4px 16px rgba(15, 25, 34, 0.04);
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
-  overflow-x: auto;
-  /* fond légèrement calcaire pour distinguer du texte */
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.28s ease;
+  cursor: zoom-in;
+  counter-increment: schema-num;
 }
 
-.dark .vp-doc .mermaid,
-.dark .vp-doc div[class*="mermaid"]:has(> svg),
-.dark .vp-doc div[id*="mermaid"]:has(> svg) {
+.dark .vp-doc .schema-figure {
   background: var(--vp-c-bg-alt);
 }
 
-/* Label "Schéma" en haut à gauche du cadre */
-.vp-doc .mermaid::before,
-.vp-doc div[class*="mermaid"]:has(> svg)::before {
-  content: '⌬  Schéma';
+/* Label "Schéma N" en haut à gauche */
+.vp-doc .schema-figure::before {
+  content: '⌬  Schéma ' counter(schema-num);
   position: absolute;
   top: 12px;
   left: 18px;
@@ -47,59 +49,209 @@
   padding: 3px 10px;
   border-radius: 100px;
   border: 1px solid var(--vp-c-divider);
+  z-index: 2;
 }
 
-.dark .vp-doc .mermaid::before,
-.dark .vp-doc div[class*="mermaid"]:has(> svg)::before {
+.dark .vp-doc .schema-figure::before {
   color: #5dade2;
   background: var(--vp-c-bg-elv);
 }
 
-/* SVG du diagramme : largeur fluide, hauteur auto */
-.vp-doc .mermaid > svg,
-.vp-doc div[class*="mermaid"] > svg,
-.vp-doc div[id*="mermaid"] > svg {
+/* Bouton agrandir en haut à droite */
+.vp-doc .schema-figure__expand-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 50%;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  padding: 0;
+}
+
+.vp-doc .schema-figure__expand-btn:hover {
+  background: var(--gv-rouge);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.dark .vp-doc .schema-figure__expand-btn {
+  background: var(--vp-c-bg-elv);
+}
+
+/* Contenu mermaid (le SVG) — taille modérée par défaut */
+.vp-doc .schema-figure .mermaid,
+.vp-doc .schema-figure > div[class*="mermaid"],
+.vp-doc .schema-figure > div[id*="mermaid"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  overflow-x: auto;
+}
+
+.vp-doc .schema-figure svg {
   max-width: 100%;
+  max-height: 320px;
   height: auto !important;
   display: block;
   margin: 0 auto;
 }
 
-/* Hover : ombre subtile pour signaler que c'est un objet visuel */
-.vp-doc .mermaid:hover,
-.vp-doc div[class*="mermaid"]:has(> svg):hover {
-  box-shadow: 0 8px 24px rgba(15, 25, 34, 0.10);
+/* Hover sur la figure : zoom subtil + ombre, comme les photos manip */
+.vp-doc .schema-figure:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 32px rgba(15, 25, 34, 0.18);
+  z-index: 50;
 }
 
-/* Mobile : padding réduit, label plus petit */
+/* Caption sous le schéma */
+.vp-doc .schema-figure__caption {
+  display: block;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--vp-c-divider);
+  font-size: 0.86rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+  text-align: center;
+}
+
+.vp-doc .schema-figure__caption::before {
+  content: 'Fig. ' counter(schema-num) '. ';
+  font-style: normal;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+/* ============================================================
+   Mode plein écran : .is-fullscreen toggle par Layout.vue
+   ============================================================ */
+body.has-schema-fullscreen {
+  overflow: hidden;
+}
+
+.vp-doc .schema-figure.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  margin: 0;
+  border-radius: 0;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px 40px;
+  background: rgba(15, 25, 34, 0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: zoom-out;
+  border: none;
+  transform: none !important;
+}
+
+.vp-doc .schema-figure.is-fullscreen::before {
+  /* le label en mode plein écran : plus visible, avec couleur */
+  background: var(--gv-rouge);
+  color: #fff;
+  border-color: transparent;
+  font-size: 0.8rem;
+  top: 24px;
+  left: 24px;
+  padding: 5px 14px;
+}
+
+.vp-doc .schema-figure.is-fullscreen .schema-figure__expand-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  font-size: 1.4rem;
+  top: 20px;
+  right: 24px;
+}
+
+.vp-doc .schema-figure.is-fullscreen .schema-figure__expand-btn::before {
+  content: '✕';
+  font-size: 1.2rem;
+}
+
+.vp-doc .schema-figure.is-fullscreen .schema-figure__expand-btn {
+  /* remplacer le ⤢ par ✕ via font-size: 0 + ::before */
+  font-size: 0;
+}
+
+.vp-doc .schema-figure.is-fullscreen svg {
+  max-width: min(95vw, 1400px);
+  max-height: 80vh;
+  filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.4));
+}
+
+.vp-doc .schema-figure.is-fullscreen .schema-figure__caption {
+  color: rgba(255, 255, 255, 0.85);
+  border-top-color: rgba(255, 255, 255, 0.2);
+  font-size: 1rem;
+  max-width: 720px;
+  margin-top: 24px;
+}
+
+.vp-doc .schema-figure.is-fullscreen .schema-figure__caption::before {
+  color: #fff;
+}
+
+/* Mobile : padding réduit + label plus petit */
 @media (max-width: 720px) {
-  .vp-doc .mermaid,
-  .vp-doc div[class*="mermaid"]:has(> svg) {
-    padding: 30px 14px 16px;
+  .vp-doc .schema-figure {
+    padding: 36px 14px 18px;
     margin: 2em -8px;
     border-radius: 10px;
   }
-  .vp-doc .mermaid::before,
-  .vp-doc div[class*="mermaid"]:has(> svg)::before {
+  .vp-doc .schema-figure::before {
     font-size: 0.65rem;
     top: 9px;
     left: 12px;
     padding: 2px 8px;
   }
+  .vp-doc .schema-figure__expand-btn {
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    font-size: 0.95rem;
+  }
+  .vp-doc .schema-figure svg {
+    max-height: 260px;
+  }
+  .vp-doc .schema-figure.is-fullscreen {
+    padding: 70px 16px 24px;
+  }
 }
 
-/* Fallback pour navigateurs sans :has() — au moins le SVG sera présentable */
-@supports not (selector(:has(*))) {
-  .vp-doc svg[id^="mermaid"],
-  .vp-doc svg[aria-roledescription="flowchart-v2"],
-  .vp-doc svg[aria-roledescription="flowchart"] {
-    display: block;
-    margin: 2em auto;
-    padding: 24px;
-    background: var(--vp-c-bg-soft);
-    border: 1px solid var(--vp-c-divider);
-    border-radius: 14px;
-    max-width: 100%;
-    height: auto !important;
-  }
+/* Fallback ancien sélecteur générique pour les schémas non wrappés (ancien syntaxe) */
+.vp-doc > .mermaid,
+.vp-doc > div[class*="mermaid"]:has(> svg) {
+  margin: 2em auto;
+  padding: 28px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  max-width: 560px;
+  display: flex;
+  justify-content: center;
 }
