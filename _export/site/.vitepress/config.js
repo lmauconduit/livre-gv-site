@@ -28,6 +28,9 @@ export default withMermaid(defineConfig({
   title: "L'escalade en grandes voies",
   description: "Guide technique complet pour grimper en grandes voies — manips, sécurité, organisation de cordée, gestion des situations.",
 
+  // Tolérer les liens cassés (annexes, avant-propos, références internes) tant que tous les fichiers ne sont pas créés
+  ignoreDeadLinks: true,
+
   srcDir: '../../',
 
   srcExclude: [
