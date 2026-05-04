@@ -1,5 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
 import './custom.css'
+import './mermaid.css'
 
 import Layout         from './Layout.vue'
 import HeroEscalade   from './components/HeroEscalade.vue'

@@ -1,0 +1,105 @@
+/* ============================================================
+   Schémas Mermaid — encadrement visuel
+   Le diagramme est rendu dans une card calcaire avec label.
+   Sélecteurs multiples pour couvrir les variations de classe
+   selon les versions de vitepress-plugin-mermaid.
+   ============================================================ */
+
+/* Conteneur du schéma — la div générée par le plugin */
+.vp-doc .mermaid,
+.vp-doc div[class*="mermaid"]:has(> svg),
+.vp-doc div[id*="mermaid"]:has(> svg) {
+  position: relative;
+  margin: 2.4em auto;
+  padding: 36px 28px 28px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(15, 25, 34, 0.04);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  overflow-x: auto;
+  /* fond légèrement calcaire pour distinguer du texte */
+}
+
+.dark .vp-doc .mermaid,
+.dark .vp-doc div[class*="mermaid"]:has(> svg),
+.dark .vp-doc div[id*="mermaid"]:has(> svg) {
+  background: var(--vp-c-bg-alt);
+}
+
+/* Label "Schéma" en haut à gauche du cadre */
+.vp-doc .mermaid::before,
+.vp-doc div[class*="mermaid"]:has(> svg)::before {
+  content: '⌬  Schéma';
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gv-bleu-verdon);
+  background: var(--vp-c-bg);
+  padding: 3px 10px;
+  border-radius: 100px;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.dark .vp-doc .mermaid::before,
+.dark .vp-doc div[class*="mermaid"]:has(> svg)::before {
+  color: #5dade2;
+  background: var(--vp-c-bg-elv);
+}
+
+/* SVG du diagramme : largeur fluide, hauteur auto */
+.vp-doc .mermaid > svg,
+.vp-doc div[class*="mermaid"] > svg,
+.vp-doc div[id*="mermaid"] > svg {
+  max-width: 100%;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Hover : ombre subtile pour signaler que c'est un objet visuel */
+.vp-doc .mermaid:hover,
+.vp-doc div[class*="mermaid"]:has(> svg):hover {
+  box-shadow: 0 8px 24px rgba(15, 25, 34, 0.10);
+}
+
+/* Mobile : padding réduit, label plus petit */
+@media (max-width: 720px) {
+  .vp-doc .mermaid,
+  .vp-doc div[class*="mermaid"]:has(> svg) {
+    padding: 30px 14px 16px;
+    margin: 2em -8px;
+    border-radius: 10px;
+  }
+  .vp-doc .mermaid::before,
+  .vp-doc div[class*="mermaid"]:has(> svg)::before {
+    font-size: 0.65rem;
+    top: 9px;
+    left: 12px;
+    padding: 2px 8px;
+  }
+}
+
+/* Fallback pour navigateurs sans :has() — au moins le SVG sera présentable */
+@supports not (selector(:has(*))) {
+  .vp-doc svg[id^="mermaid"],
+  .vp-doc svg[aria-roledescription="flowchart-v2"],
+  .vp-doc svg[aria-roledescription="flowchart"] {
+    display: block;
+    margin: 2em auto;
+    padding: 24px;
+    background: var(--vp-c-bg-soft);
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 14px;
+    max-width: 100%;
+    height: auto !important;
+  }
+}
