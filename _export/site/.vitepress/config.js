@@ -86,6 +86,11 @@ export default withMermaid(defineConfig({
   themeConfig: {
     logo: '/logo.svg',
 
+    // TOC interne (sidebar droite "Sur cette page") : montre H2 + H3 + H4
+    // au lieu du seul H2 par défaut → utile pour naviguer dans les chapitres
+    // structurés en sous-sections numérotées (3.1, 3.2, etc.)
+    outline: [2, 4],
+
     nav: [
       { text: 'Accueil', link: '/' },
       { text: 'Sommaire', link: '/sommaire' },
