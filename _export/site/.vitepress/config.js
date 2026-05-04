@@ -6,13 +6,13 @@ import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-// Markdown-it plugin : remplace <<schema:fichier.mmd>> par un bloc mermaid
+// Markdown-it plugin : remplace <<schema:fichier.mmd>> ou <<schema:fichier.mmd|preset>> par un bloc mermaid
+// Syntaxe unifiée PDF + site : le preset (xs/s/m/l/xl) est ignoré par VitePress, utilisé par assemble_pdf.py
 // DOIT être dans markdown.config (pas un Vite plugin) pour s'exécuter avant le parsing
 function schemaIncludePlugin(md) {
   const originalParse = md.parse.bind(md)
   md.parse = (src, env) => {
-    const processed = src.replace(/<<schema:([^>]+)>>/g, (match, filename) => {
-      // __dirname = _export/site/.vitepress/  →  ../../../_schemas = PJT LivreEscaladeGV/_schemas
+    const processed = src.replace(/<<schema:([^>|]+)(?:\|[^>]+)?>>/g, (match, filename) => {
       const schemaPath = path.join(__dirname, '..', '..', '..', '_ressources', 'schemas', filename.trim())
       try {
         const content = fs.readFileSync(schemaPath, 'utf-8')
