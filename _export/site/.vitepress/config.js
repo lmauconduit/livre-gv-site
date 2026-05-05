@@ -50,6 +50,7 @@ export default withMermaid(defineConfig({
   srcExclude: [
     'Editorial/**',
     '_archive/**',
+    '_doc/**',
     '_meta/**',
     '_rapports/**',
     '_skill/**',
@@ -57,15 +58,45 @@ export default withMermaid(defineConfig({
     '_export/**',
     'livre-gv-site/**',
     'node_modules/**',
-    'Partie1-Decouvrir-la-Grande-Voie.md',
-    'Partie2-Se-Preparer.md',
-    'Partie3-Sorganiser-en-Cordee.md',
-    'Partie4-Fondamentaux-Techniques.md',
-    'Partie5-Maitriser-Relais-Assurage.md',
-    'Partie6-Gerer-les-Situations.md',
-    'Partie7-Lire-le-Terrain-et-Decider.md',
-    'Partie8-Vers-lAutonomie.md',
+    'parties/**',
   ],
+
+  // Rewrites : préservent les URLs publiques après migration vers fichiers à plat à la racine.
+  // Source : P{N}-Ch{NN}-{slug}.md à la racine — Destination URL : /parties/partieN/chapitre-NN.html
+  rewrites: {
+    '00-index.md':                       'index.md',
+    '00-sommaire.md':                    'sommaire.md',
+    '00-comment-lire.md':                'comment-lire.md',
+    'P1-Ch01-pourquoi-grimper.md':       'parties/partie1/chapitre-01.md',
+    'P1-Ch02-une-autre-facon.md':        'parties/partie1/chapitre-02.md',
+    'P1-Ch03-avec-quoi.md':              'parties/partie1/chapitre-03.md',
+    'P2-Ch04-choisir-sa-voie.md':        'parties/partie2/chapitre-04.md',
+    'P2-Ch05-materiel.md':               'parties/partie2/chapitre-05.md',
+    'P2-Ch06-preparer-sa-course.md':     'parties/partie2/chapitre-06.md',
+    'P2-Ch07-chaine-de-securite.md':     'parties/partie2/chapitre-07.md',
+    'P3-Ch08-roles-cordee.md':           'parties/partie3/chapitre-08.md',
+    'P3-Ch09-communiquer.md':            'parties/partie3/chapitre-09.md',
+    'P3-Ch10-strategie-progression.md':  'parties/partie3/chapitre-10.md',
+    'P4-Ch11-noeuds.md':                 'parties/partie4/chapitre-11.md',
+    'P4-Ch12-progresser-en-tete.md':     'parties/partie4/chapitre-12.md',
+    'P4-Ch13-relais-simple.md':          'parties/partie4/chapitre-13.md',
+    'P4-Ch14-rappel.md':                 'parties/partie4/chapitre-14.md',
+    'P4-Ch15-rechappes.md':              'parties/partie4/chapitre-15.md',
+    'P5-Ch16-comprendre-relais.md':      'parties/partie5/chapitre-16.md',
+    'P5-Ch17-relais-pratique.md':        'parties/partie5/chapitre-17.md',
+    'P5-Ch18-relais-propre.md':          'parties/partie5/chapitre-18.md',
+    'P5-Ch19-assurage-avance.md':        'parties/partie5/chapitre-19.md',
+    'P6-Ch20-remontees.md':              'parties/partie6/chapitre-20.md',
+    'P6-Ch21-mouflages.md':              'parties/partie6/chapitre-21.md',
+    'P6-Ch22-improviser.md':             'parties/partie6/chapitre-22.md',
+    'P6-Ch23-corde-abimee.md':           'parties/partie6/chapitre-23.md',
+    'P7-Ch24-lire-terrain.md':           'parties/partie7/chapitre-24.md',
+    'P7-Ch25-facteurs-decision.md':      'parties/partie7/chapitre-25.md',
+    'P7-Ch26-premiers-secours.md':       'parties/partie7/chapitre-26.md',
+    'P8-Ch27-construire-progression.md': 'parties/partie8/chapitre-27.md',
+    'P8-Ch28-erreurs-classiques.md':     'parties/partie8/chapitre-28.md',
+    'P8-Ch29-aide-seconds.md':           'parties/partie8/chapitre-29.md',
+  },
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -87,8 +118,6 @@ export default withMermaid(defineConfig({
     logo: '/logo.svg',
 
     // TOC interne (sidebar droite "Sur cette page") : montre H2 + H3 + H4
-    // au lieu du seul H2 par défaut → utile pour naviguer dans les chapitres
-    // structurés en sous-sections numérotées (3.1, 3.2, etc.)
     outline: [2, 4],
 
     nav: [
@@ -99,12 +128,12 @@ export default withMermaid(defineConfig({
         items: [
           { text: 'P1 — Découvrir la grande voie', link: '/parties/partie1/chapitre-01' },
           { text: 'P2 — Se préparer',               link: '/parties/partie2/chapitre-04' },
-          { text: 'P3 — S\'organiser en cordée',    link: '/parties/partie3/chapitre-08' },
+          { text: "P3 — S'organiser en cordée",    link: '/parties/partie3/chapitre-08' },
           { text: 'P4 — Fondamentaux techniques',   link: '/parties/partie4/chapitre-11' },
           { text: 'P5 — Maîtriser relais et assurage', link: '/parties/partie5/chapitre-16' },
           { text: 'P6 — Gérer les situations',      link: '/parties/partie6/chapitre-20' },
           { text: 'P7 — Lire le terrain et décider', link: '/parties/partie7/chapitre-24' },
-          { text: 'P8 — Vers l\'autonomie',         link: '/parties/partie8/chapitre-27' },
+          { text: "P8 — Vers l'autonomie",         link: '/parties/partie8/chapitre-27' },
         ]
       },
     ],
@@ -138,7 +167,7 @@ export default withMermaid(defineConfig({
         ]
       },
       {
-        text: 'Partie 3 — S\'organiser en cordée',
+        text: "Partie 3 — S'organiser en cordée",
         collapsed: true,
         items: [
           { text: 'Ch.8 — Les rôles dans la cordée', link: '/parties/partie3/chapitre-08' },
@@ -164,7 +193,7 @@ export default withMermaid(defineConfig({
           { text: 'Ch.16 — Comprendre les relais',         link: '/parties/partie5/chapitre-16' },
           { text: 'Ch.17 — Les relais en pratique',         link: '/parties/partie5/chapitre-17' },
           { text: 'Ch.18 — Organiser un relais propre',     link: '/parties/partie5/chapitre-18' },
-          { text: 'Ch.19 — Techniques d\'assurage avancées', link: '/parties/partie5/chapitre-19' },
+          { text: "Ch.19 — Techniques d'assurage avancées", link: '/parties/partie5/chapitre-19' },
         ]
       },
       {
@@ -187,7 +216,7 @@ export default withMermaid(defineConfig({
         ]
       },
       {
-        text: 'Partie 8 — Vers l\'autonomie',
+        text: "Partie 8 — Vers l'autonomie",
         collapsed: true,
         items: [
           { text: 'Ch.27 — Construire sa progression', link: '/parties/partie8/chapitre-27' },
@@ -231,7 +260,7 @@ export default withMermaid(defineConfig({
 
     footer: {
       message: 'Contenu sous licence Creative Commons BY-NC-SA 4.0',
-      copyright: '© 2026 — L\'escalade en grandes voies'
+      copyright: "© 2026 — L'escalade en grandes voies"
     },
 
     editLink: {

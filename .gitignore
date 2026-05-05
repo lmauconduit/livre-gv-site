@@ -1,22 +1,14 @@
 # Node modules
 _export/site/node_modules/
+node_modules/
+node_modules
 
 # VitePress build artefacts
 _export/site/.vitepress/dist/
 _export/site/.vitepress/cache/
 
-# Dossiers système éditoriaux — pas de contenu à versionner
-_meta/
-_rapports/
-_skill/
+# Snapshots locaux de migration (volumineux, déjà dans git history)
+_archive/snapshot-pre-migration-*/
 
-# Ancienne structure — à supprimer après migration
-livre-gv-site/
-Editorial/
-
-# Dossiers sources privés
-_Doc/
-
-# OS
-.DS_Store
-Thumbs.db
+# Artefacts PDF générés (à régénérer via assemble_livre_gv.py)
+_export/pdf/_schemas_rendered/__pycache__/

@@ -12,7 +12,7 @@ Ce chapitre passe en revue l'ensemble du matériel de grande voie, non pas pour 
 
 ---
 
-### 2.1 La corde [T]
+### 2.1 La corde
 
 La corde est l'élément central du système de sécurité. En grande voie, on utilise principalement deux types de configuration : la corde à simple et les cordes à double (ou jumelées).
 
@@ -30,21 +30,15 @@ Le traitement hydrophobe est un plus appréciable dans les voies exposées à l'
 
 ---
 
-### 2.2 Le baudrier et l'encordement [T]
+### 2.2 Le baudrier et l'encordement
 
 Le baudrier de grande voie n'a pas besoin d'être un modèle spécialisé, mais il doit répondre à quelques critères essentiels. D'abord, le confort sur la durée : en grande voie, on passe de longs moments suspendus au relais, parfois dans des positions inconfortables. Un baudrier qui serre, qui coupe, qui comprime au bout de vingt minutes devient un problème réel au bout de deux heures. Ensuite, la capacité de portage : les porte-matériels doivent être suffisamment larges et rigides pour accueillir l'ensemble du matériel sans que tout s'emmêle — dégaines, sangles, mousquetons à vis, appareil d'assurage, cordelettes.
 
 L'encordement en grande voie se fait systématiquement au pontet du baudrier, par un nœud de huit ou un nœud de chaise, selon les habitudes et les recommandations en vigueur. Le point essentiel est la vérification croisée avant le départ : chaque membre de la cordée vérifie l'encordement de l'autre. Cette vérification n'est pas une formalité — c'est un rituel de sécurité fondamental qui doit être maintenu à chaque départ de longueur, y compris après des heures de grimpe quand la routine risque d'émousser l'attention.
 
-::: warning RAPPEL
-**RAPPEL : Encordement et nœuds de sécurité**
-
-Les techniques détaillées de confection des nœuds de sécurité sont décrites en Chapitre 10 (Noeuds et manipulations de cordage). Cette section pose simplement le principe de la redondance et de la vérification.
-:::
-
 ---
 
-### 2.3 Le casque [T]
+### 2.3 Le casque
 
 Le casque est non négociable en grande voie. Ce n'est pas un choix, c'est un impératif de base. Les chutes de pierres — naturelles ou provoquées par le passage de la cordée au-dessus — sont un risque permanent et imprévisible. Une pierre de la taille d'un poing, lâchée de trente mètres, suffit à provoquer un traumatisme crânien grave.
 
@@ -52,7 +46,7 @@ On choisit un casque léger, bien ventilé, confortable sur la durée, et on le 
 
 ---
 
-### 2.4 Les mousquetons : formes, usages et règles [T]
+### 2.4 Les mousquetons : formes, usages et règles
 
 Tous les mousquetons ne se valent pas, et en grande voie, connaître leurs différences permet de faire les bons choix au bon moment. On distingue trois familles principales de mousquetons à vis (ou à verrouillage) selon leur forme.
 
@@ -66,7 +60,7 @@ La règle de base : chaque appareil a son mousqueton dédié. On ne partage pas 
 
 ---
 
-### 2.5 Les dégaines [T]
+### 2.5 Les dégaines
 
 En grande voie, on emporte généralement entre 10 et 15 dégaines, selon le nombre de points par longueur et la nature de l'équipement en place. Mais toutes les dégaines ne sont pas identiques, et leur longueur compte.
 
@@ -76,7 +70,7 @@ Le rangement des dégaines au baudrier mérite une attention particulière. On l
 
 ---
 
-### 2.6 L'appareil d'assurage [T]
+### 2.6 L'appareil d'assurage
 
 En grande voie, l'appareil d'assurage de type plaquette autobloquante (comme le Reverso, l'ATC Guide ou le Pivot) est la référence. Son avantage fondamental : il permet d'assurer le second depuis le haut en mode autobloquant, ce qui libère les mains du leader pour préparer la suite — gestion de la corde, consultation du topo, organisation du relais.
 
@@ -84,15 +78,9 @@ Un point critique souvent négligé : la **compatibilité entre l'appareil et le
 
 Il est donc essentiel de vérifier la compatibilité appareil-corde avant de partir, et de s'entraîner à manipuler l'ensemble dans les deux modes — assurage du leader depuis le bas, assurage du second depuis le haut — avec la corde que l'on utilisera réellement.
 
-::: warning RAPPEL
-**RAPPEL : Techniques d'assurage et modes de freinage**
-
-Les protocoles détaillés d'assurage et les différents modes de manipulation sont couverts en Chapitre 10 (Assurage au relais). Cette section se concentre sur le choix et la vérification du matériel.
-:::
-
 ---
 
-### 2.7 Sangles, cordelettes et dynaloop [T]
+### 2.7 Sangles, cordelettes et dynaloop
 
 Les sangles et cordelettes sont des éléments polyvalents qui jouent un rôle central en grande voie — pour construire des relais, réaliser des anneaux autobloquants, rallonger une longe, confectionner une pédale de remontée, ou improviser une solution face à un imprévu.
 
@@ -102,15 +90,9 @@ Les **cordelettes** (ou ficelous) en 6 ou 7 mm servent essentiellement à confec
 
 La règle importante : **chaque sangle et chaque cordelette doit être inspectée régulièrement**. Les sangles en dyneema sont sensibles à l'abrasion et au frottement sur les arêtes de rocher. Une sangle dont la couture est effilochée ou dont le tissu est visiblement usé ne doit pas être utilisée en charge.
 
-::: warning RAPPEL
-**RAPPEL : Construction et triangulation des relais**
-
-Les protocoles détaillés de confection des relais et les principes de triangulation sont décrits en Chapitre 8 (Construire les relais). Cette section présente seulement le matériel.
-:::
-
 ---
 
-### 2.8 Le système de longe : vachage et sécurité au relais [T]
+### 2.8 Le système de longe : vachage et sécurité au relais
 
 Le vachage — l'action de se connecter de manière sûre à un point d'ancrage au relais — est un geste que l'on répète des dizaines de fois dans une grande voie. Il doit être fiable, rapide et systématique.
 
@@ -118,15 +100,9 @@ Plusieurs systèmes coexistent : la longe cousue dédiée (type Connect Adjust o
 
 Quel que soit le système choisi, le principe est invariable : **on ne se détache jamais d'un point sans être déjà connecté à un autre**. Cette règle, simple en théorie, demande une discipline constante dans la pratique, en particulier lors des transitions au relais où les manipulations se multiplient et où la fatigue peut altérer la vigilance.
 
-::: warning RAPPEL
-**RAPPEL : Le vachage et la gestion des relais**
-
-Les protocoles techniques de vachage et les différentes options selon le contexte sont détaillés en Chapitre 8 (Construire les relais) et Chapitre 9 (Assurer depuis le relais). Cette section fixe seulement le principe fondamental.
-:::
-
 ---
 
-### 2.9 Le matériel complémentaire [A]
+### 2.9 Le matériel complémentaire
 
 Au-delà du matériel de base, certains éléments complémentaires élargissent significativement la capacité de la cordée à gérer les situations.
 
@@ -138,15 +114,9 @@ Le **couteau** est obligatoire. Il sert à couper des sangles ou des cordelettes
 
 Le **topo** — qu'il soit sur papier ou sur téléphone (avec une batterie suffisante) — est indispensable. En grande voie, on a besoin de consulter l'itinéraire à chaque relais : quelle direction pour la longueur suivante, combien de mètres, quelle cotation, où se trouve le prochain relais. Un topo lisible, accessible, et éventuellement doublé par une photocopie plastifiée, fait partie du matériel de sécurité.
 
-::: warning RAPPEL
-**RAPPEL : Mouflages et sauvetage**
-
-Les techniques détaillées d'improvisation de mouflages et de sauvetage de cordée sont couverts en Chapitre 11 (Situations d'urgence et sauvetage). Cette section énumère simplement le matériel minimal pour ces opérations.
-:::
-
 ---
 
-### 2.10 Organiser son baudrier et son sac [T]
+### 2.10 Organiser son baudrier et son sac
 
 L'organisation du matériel n'est pas un détail — c'est un facteur de sécurité et d'efficacité. En grande voie, on doit pouvoir trouver n'importe quelle pièce d'équipement rapidement, sans tâtonner, y compris dans une position inconfortable ou sous stress.
 
@@ -156,15 +126,13 @@ L'organisation du matériel n'est pas un détail — c'est un facteur de sécuri
 
 Un piège classique : **le sac trop lourd comme « doudou »**. En grande voie, il est tentant d'emporter tout « au cas où » — une deuxième veste, un litre d'eau en plus, des barres pour toute la journée, un appareil photo, un drone. Cette surcharge traduit souvent une anxiété face à l'engagement plus qu'un besoin réel. Apprendre à grimper léger, c'est apprendre à faire confiance à sa préparation et à sa capacité d'adaptation. Le matériel qui ne sert pas pèse — sur le dos, sur les bras, sur la fluidité de la progression et sur le moral.
 
-::: info Check-list
-**Check-list : Matériel minimum pour une grande voie équipée de 4 à 8 longueurs**
-
-*Matériel personnel :* Corde (longueur adaptée aux longueurs prévues) — Casque — Baudrier — Chaussons — Appareil d'assurage + 2 mousquetons dédiés — Système de longe/vachage — 10 à 15 dégaines dont 2-3 rallongeables — 2 à 4 mousquetons à vis supplémentaires — 2 dynaloop 120 cm — 1 à 2 cordelettes (ficelous) — Sac à magnésie — Couteau au baudrier.
-
-*Matériel de confort et sécurité :* Eau (1 L minimum) — Barre énergétique — Coupe-vent léger — Trousse de secours minimale — Téléphone chargé — Topo lisible.
-
-*Matériel complémentaire (recommandé) :* Poulie autobloquante + mousqueton — Petit-bloc — Cordelette de mouflage — Talkie-walkie (si communication difficile).
-:::
+> **Check-list : Matériel minimum pour une grande voie équipée de 4 à 8 longueurs**
+>
+> *Matériel personnel :* Corde (longueur adaptée aux longueurs prévues) — Casque — Baudrier — Chaussons — Appareil d'assurage + 2 mousquetons dédiés — Système de longe/vachage — 10 à 15 dégaines dont 2-3 rallongeables — 2 à 4 mousquetons à vis supplémentaires — 2 dynaloop 120 cm — 1 à 2 cordelettes (ficelous) — Sac à magnésie — Couteau au baudrier.
+>
+> *Matériel de confort et sécurité :* Eau (1 L minimum) — Barre énergétique — Coupe-vent léger — Trousse de secours minimale — Téléphone chargé — Topo lisible.
+>
+> *Matériel complémentaire (recommandé) :* Poulie autobloquante + mousqueton — Petit-bloc — Cordelette de mouflage — Talkie-walkie (si communication difficile).
 
 ---
 
@@ -178,7 +146,7 @@ Préparer une course, ce n'est pas simplement « regarder le topo ». C'est un p
 
 ---
 
-### 3.1 Lire et interpréter un topo [T]
+### 3.1 Lire et interpréter un topo
 
 Le topo est la carte de la voie. Mais comme toute carte, il est une représentation simplifiée de la réalité, pas la réalité elle-même. Savoir lire un topo, c'est savoir extraire les informations essentielles tout en gardant à l'esprit que le terrain peut différer de ce qui est décrit.
 
@@ -188,7 +156,7 @@ La lecture du topo se fait en trois temps. D'abord, une vue d'ensemble : combien
 
 ---
 
-### 3.2 Évaluer la difficulté réelle [T]
+### 3.2 Évaluer la difficulté réelle
 
 La cotation d'une voie n'est qu'une indication partielle de sa difficulté réelle. Un 5c en couenne et un 5c au septième relais d'une grande voie, avec un sac au dos, après cinq heures de grimpe, par 35 degrés, ne sont pas la même chose.
 
@@ -198,7 +166,7 @@ La règle prudente pour débuter en grande voie : **choisir des voies cotées au
 
 ---
 
-### 3.3 Choisir une voie adaptée [T]
+### 3.3 Choisir une voie adaptée
 
 Le choix de la voie est un acte de responsabilité. On ne part pas dans une voie « parce qu'elle est belle » ou « parce qu'un ami l'a faite ». On part dans une voie parce qu'on a évalué qu'elle est compatible avec le niveau réel de la cordée, les conditions du jour, le matériel disponible et le temps dont on dispose.
 
@@ -208,7 +176,7 @@ On ne part pas avec n'importe qui. L'évaluation du niveau et de la fiabilité d
 
 ---
 
-### 3.4 Repérer la voie : approche et descente [T]
+### 3.4 Repérer la voie : approche et descente
 
 La voie elle-même ne représente qu'une partie de la course. L'approche — la marche pour atteindre le pied de la voie — et la descente — le retour au sol après la sortie — sont des composantes à part entière qui doivent être préparées avec la même attention.
 
@@ -218,7 +186,7 @@ Quand c'est possible, **repérer la voie à l'avance** est un investissement qui
 
 ---
 
-### 3.5 Météo et conditions [T]
+### 3.5 Météo et conditions
 
 La météo est un facteur de décision majeur en grande voie. Un orage en paroi est une situation potentiellement mortelle — le rocher mouillé devient glissant, la foudre frappe en priorité les points hauts et les arêtes, la pluie refroidit brutalement et peut provoquer une hypothermie en quelques dizaines de minutes.
 
@@ -228,7 +196,7 @@ Au-delà de la météo, les conditions de la voie elle-même comptent : le roche
 
 ---
 
-### 3.6 Horaires et gestion du temps [T]
+### 3.6 Horaires et gestion du temps
 
 Le temps est une ressource non renouvelable en grande voie. Quand il est épuisé, les options se réduisent. Une cordée qui se retrouve en milieu de voie à la tombée de la nuit fait face à une situation sérieuse, même dans une voie techniquement facile.
 
@@ -238,7 +206,7 @@ On fixe des **horaires-butoirs** avant le départ : « à telle heure, si on n'e
 
 ---
 
-### 3.7 La trousse de secours [T]
+### 3.7 La trousse de secours
 
 On n'est pas secouriste professionnel, et on ne prétend pas l'être. Mais en grande voie, on peut être à une heure ou plus de tout secours, et la capacité à réaliser les premiers gestes peut faire une différence significative.
 
@@ -248,7 +216,7 @@ On n'administre pas de médicaments — on n'en a ni la compétence ni le droit.
 
 ---
 
-### 3.8 Communication et moyens de secours [T]
+### 3.8 Communication et moyens de secours
 
 En grande voie, le téléphone portable est un outil de sécurité. Il doit être chargé, protégé et accessible. Mais il ne fonctionne pas partout — certaines parois sont des zones blanches, et le réseau peut être absent précisément là où on en a le plus besoin.
 
@@ -258,21 +226,15 @@ En cas d'urgence, le numéro à composer est le **112**. Lors de l'appel, on fou
 
 Avant de partir, on s'assure que chaque membre de la cordée connaît le numéro d'urgence et la procédure d'appel. Et on laisse à quelqu'un au sol — un proche, un ami — les informations suivantes : où l'on va, par quelle voie, à quelle heure on prévoit d'être de retour, et à partir de quelle heure il faut s'inquiéter.
 
-::: info Check-list
-**Check-list : Préparation J-1 et vérifications du matin**
-
-*La veille :* Consulter la météo détaillée — Lire le topo en entier (voie + descente) — Vérifier tout le matériel — Préparer le sac — Planifier l'horaire de départ et les horaires-butoirs — Informer un proche de l'itinéraire et de l'horaire de retour prévu.
-
-*Le matin :* Re-vérifier la météo — Vérifier la charge du téléphone — Vérification croisée du matériel avec le partenaire — Caler les derniers points de communication (signaux, protocoles) — Confirmer ou ajuster le plan en fonction des conditions réelles.
-:::
+> **Check-list : Préparation J-1 et vérifications du matin**
+>
+> *La veille :* Consulter la météo détaillée — Lire le topo en entier (voie + descente) — Vérifier tout le matériel — Préparer le sac — Planifier l'horaire de départ et les horaires-butoirs — Informer un proche de l'itinéraire et de l'horaire de retour prévu.
+>
+> *Le matin :* Re-vérifier la météo — Vérifier la charge du téléphone — Vérification croisée du matériel avec le partenaire — Caler les derniers points de communication (signaux, protocoles) — Confirmer ou ajuster le plan en fonction des conditions réelles.
 
 ---
 
 ## Chapitre 4 — La chaîne de sécurité
-
-::: danger ⚡ ALERTE
-**⚡ Ce chapitre décrit des techniques qui engagent la sécurité. La lecture ne remplace pas l'apprentissage encadré et la pratique supervisée.**
-:::
 
 ### Penser en système, pas en liste
 
@@ -282,31 +244,21 @@ Ce chapitre présente les principes fondamentaux qui sous-tendent l'ensemble des
 
 ---
 
-### 4.1 Le concept de chaîne de sécurité [T] ⚡
+### 4.1 Le concept de chaîne de sécurité
 
 En grande voie, la sécurité repose sur une succession d'éléments interdépendants : le rocher (qualité de l'ancrage), le matériel (résistance et bon état), la manipulation (technique correcte), la vérification (contrôle avant mise en charge) et la communication (coordination entre les membres de la cordée).
 
-::: danger ⚡ ALERTE
-**⚡ ALERTE : Principe fondamental**
-
-Si l'un de ces éléments est défaillant, l'ensemble est compromis — même si tous les autres sont parfaits. Un ancrage solide avec un mousqueton mal fermé. Un nœud parfait sur une corde usée. Un relais irréprochable avec un malentendu sur le moment du départ. **Chaque accident grave en grande voie peut être décomposé en une chaîne de défaillances — rarement une seule erreur massive, presque toujours une accumulation de petites négligences qui, séparément, auraient été sans conséquence.**
-:::
+Si l'un de ces éléments est défaillant, l'ensemble est compromis — même si tous les autres sont parfaits. Un ancrage solide avec un mousqueton mal fermé. Un nœud parfait sur une corde usée. Un relais irréprochable avec un malentendu sur le moment du départ. Chaque accident grave en grande voie peut être décomposé en une chaîne de défaillances — rarement une seule erreur massive, presque toujours une accumulation de petites négligences qui, séparément, auraient été sans conséquence.
 
 C'est pour cela que la sécurité en grande voie est une discipline continue, pas un acte ponctuel. On ne « fait la sécurité » pas à un moment donné — on maintient la sécurité en permanence, du premier geste au dernier.
 
 ---
 
-### 4.2 Redondance, vérification croisée et auto-contrôle [T]
+### 4.2 Redondance, vérification croisée et auto-contrôle
 
 Trois principes structurent la fiabilité en grande voie.
 
 **La redondance** signifie que chaque point critique de sécurité est soutenu par au moins deux éléments indépendants. Un relais sur deux points. Un rappel avec un autobloquant de sécurité. Un vachage plus la corde d'escalade tant qu'elle est en tension. La redondance accepte la possibilité de la défaillance d'un élément et s'organise pour que cette défaillance ne soit jamais fatale.
-
-::: danger ⚡ ALERTE
-**⚡ ALERTE : Redondance et points de sécurité**
-
-En grande voie, la redondance n'est pas une option — c'est une obligation. Chaque nœud a un nœud d'arrêt. Chaque rappel a un autobloquant. Chaque vachage combine au moins deux éléments. C'est cela qui distingue le système de sécurité de la grande voie de la simple grimpe.
-:::
 
 **La vérification croisée** signifie que chaque manipulation critique est vérifiée par une autre personne. Avant de départ de longueur : encordement vérifié par le partenaire. Avant un rappel : installation vérifiée par le partenaire. Avant de lancer le second : relais vérifié visuellement. Cette double vérification n'est pas une marque de méfiance — c'est la reconnaissance que tout le monde peut commettre une erreur, et que l'erreur d'un seul ne doit pas compromettre la sécurité de tous.
 
@@ -314,7 +266,7 @@ En grande voie, la redondance n'est pas une option — c'est une obligation. Cha
 
 ---
 
-### 4.3 Les marges : pourquoi grimper en dessous de son niveau [T]
+### 4.3 Les marges : pourquoi grimper en dessous de son niveau
 
 La notion de marge est fondamentale en grande voie. Elle signifie conserver en permanence une capacité de réserve — physique, technique, mentale — pour faire face à l'imprévu.
 
@@ -326,15 +278,9 @@ Cette marge n'est pas un luxe. C'est une nécessité de sécurité. Et c'est aus
 
 ---
 
-### 4.4 La règle d'or : toujours au moins deux points de sécurité [T] ⚡
+### 4.4 La règle d'or : toujours au moins deux points de sécurité
 
-En grande voie, la règle d'or peut se formuler simplement :
-
-::: danger ⚡ ALERTE
-**⚡ ALERTE : Règle critique de sécurité**
-
-**À tout moment, on est protégé par au moins deux éléments de sécurité indépendants.** Un relais sur deux points. Un vachage + la corde. Deux brins de rappel. Deux nœuds de fermeture.
-:::
+En grande voie, la règle d'or peut se formuler simplement : **à tout moment, on est protégé par au moins deux éléments de sécurité indépendants**. Un relais sur deux points. Un vachage + la corde. Deux brins de rappel. Deux nœuds de fermeture.
 
 Cette règle ne tolère aucune exception. Il n'y a jamais de « juste une seconde où je suis sur un seul point ». C'est précisément dans ces « juste une seconde » que les accidents se produisent — un crochet qui lâche, une virole qui s'ouvre, un pied qui glisse.
 
@@ -342,17 +288,11 @@ Le passage d'un état à un autre — d'un relais à la progression, de la progr
 
 ---
 
-### 4.5 Reconnaître les différents types de points dans la voie [T] ⚡
+### 4.5 Reconnaître les différents types de points dans la voie
 
 En grande voie, on rencontre différents types de points d'ancrage, et leur fiabilité varie considérablement. Savoir les reconnaître et évaluer leur solidité fait partie des compétences fondamentales.
 
 Les **broches scellées** (spits, goujons, collinox) sont les plus fiables quand elles sont en bon état. Scellées dans le rocher par perçage, elles offrent une résistance élevée et prévisible. On vérifie cependant leur état : une broche tordue, rouillée en profondeur, ou dont la plaquette bouge au toucher doit être considérée comme suspecte.
-
-::: danger ⚡ ALERTE
-**⚡ ALERTE : Inspection des points d'ancrage**
-
-Avant chaque course, chaque point d'ancrage doit être inspecté sommairement — pas avec obsession, mais avec attention. Une broche qui a changé d'aspect depuis la dernière visite, un mousqueton rouillé sur un point, une sangle décolorée au soleil : ces signaux méritent une réaction. Quand on a un doute sur un point, on peut l'utiliser en redondance avec un autre, mais on ne le compte pas comme l'élément principal d'un relais critique.
-:::
 
 Les **pitons** sont des lames métalliques enfoncées dans les fissures. Leur fiabilité dépend entièrement de la qualité de leur placement et de l'état du rocher. Un piton qui « sonne creux » au marteau (ou à la tape du mousqueton) est potentiellement instable. Un piton ancien, rouillé, dans un rocher fissuré mérite la plus grande méfiance.
 
@@ -360,12 +300,10 @@ Les **coinceurs** et les **friends** sont des protections amovibles que le grimp
 
 Les **anneaux de sangle sur becquet ou lunule** sont des protections naturelles qui exploitent les formes du rocher. Leur solidité dépend de la qualité du rocher, de la forme du becquet et de l'état de la sangle. Une sangle décolorée par le soleil, effilochée, ou dont le nœud est douteux, ne doit pas être considérée comme un point de sécurité fiable sans renforcement.
 
-::: danger ⚡ ALERTE
-**Encadré ALERTE : Les accidents les plus fréquents en grande voie et leurs causes**
-
-Les analyses d'accidents en escalade montrent que les causes les plus fréquentes en grande voie ne sont pas les chutes spectaculaires ou les défaillances de matériel. Elles sont bien plus prosaïques : un nœud non terminé (huit sans nœud d'arrêt), un mousqueton mal fermé, un rappel lancé sans nœud en bout de corde, un malentendu de communication (« sec » interprété comme « tu peux y aller »), un relais construit sur un seul point, une désescalade sans sécurité.
-
-Le point commun de ces accidents : ils résultent presque tous d'une rupture dans la chaîne de vérification, souvent liée à la fatigue, à la routine ou à la pression du temps. La technique était connue. Le geste avait été fait des centaines de fois. Mais ce jour-là, à ce moment-là, l'attention a baissé.
-
-**C'est pourquoi ce livre insiste autant sur les vérifications systématiques que sur les techniques elles-mêmes. La meilleure technique du monde ne protège pas d'une inattention au mauvais moment.**
-:::
+> **Encadré ALERTE : Les accidents les plus fréquents en grande voie et leurs causes**
+>
+> Les analyses d'accidents en escalade montrent que les causes les plus fréquentes en grande voie ne sont pas les chutes spectaculaires ou les défaillances de matériel. Elles sont bien plus prosaïques : un nœud non terminé (huit sans nœud d'arrêt), un mousqueton mal fermé, un rappel lancé sans nœud en bout de corde, un malentendu de communication (« sec » interprété comme « tu peux y aller »), un relais construit sur un seul point, une désescalade sans sécurité.
+>
+> Le point commun de ces accidents : ils résultent presque tous d'une rupture dans la chaîne de vérification, souvent liée à la fatigue, à la routine ou à la pression du temps. La technique était connue. Le geste avait été fait des centaines de fois. Mais ce jour-là, à ce moment-là, l'attention a baissé.
+>
+> C'est pourquoi ce livre insiste autant sur les vérifications systématiques que sur les techniques elles-mêmes. La meilleure technique du monde ne protège pas d'une inattention au mauvais moment.
